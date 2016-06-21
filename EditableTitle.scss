@@ -1,0 +1,25 @@
+@import "./inputCommon.scss";
+
+.EditableTitle {
+  .EditableTitle-editButton {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 1em;
+    font-size:0.6em;
+    color: orange;
+    outline: none;
+  }
+  .EditableTitle-input {
+    width: 100%;
+    outline: none;
+  }
+  &.EditableTitle--set {
+    .EditableTitle-input {
+      display: none;
+    }
+  }
+
+
+}

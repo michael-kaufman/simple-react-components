@@ -1,0 +1,29 @@
+@import '../common.scss';
+
+.CircularButton {
+  width: 2em;
+  height: 2em;
+  margin: 0 0.2em;
+  padding: 0.4em 0.1em;
+  background: none;
+  border: 2px solid $lilac;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: $lilac;
+  outline: none;
+  transition: all 0.2s ease-in;
+  text-align: center;
+
+  &.CircularButton--active {
+    background: none;
+    color: $orange;
+    border: 2px solid $orange;
+  }
+  &.CircularButton--active:hover {
+    background: $orange;
+  }
+  &:hover {
+    background: $lilac;
+    color: #243474;
+  }
+}

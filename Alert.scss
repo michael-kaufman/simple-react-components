@@ -1,0 +1,47 @@
+@import "../common.scss";
+
+.Alert {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1rem 0;
+  align-items: center;
+
+  .Alert-label {
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+  .Alert-label, .Alert-iconWrapper {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .Icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -1px 0.5em 0 0;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  &--info {
+    color: $brand-color;
+  }
+  &--success {
+    color: $success-color;
+  }
+  &--warning {
+    color: $warning-color;
+  }
+  &--error {
+    color: $error-color;
+  }
+
+  &--centerAlign {
+    justify-content: center;
+  }
+  &--rightAlign {
+    justify-content: flex-end;
+  }
+  &--inline {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../common.scss';
+
+.Checkbox {
+  font-size: 1.4rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  outline: none;
+  text-align: center;
+
+  &:focus .Checkbox-inner {
+    outline-color: #5078B9;
+  }
+
+  &-inner {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.2em;
+    margin: 3px;
+    border: 1px solid #5078B9;
+    background: $theme-color-dark-backdrop;
+    color: $brand-color;
+    outline: transparent solid 2px;
+    outline-offset: 0px;
+    transition: outline-color 0.2s ease-in;
+  }
+  &.Checkbox--checked .Icon {
+    opacity: 1;
+  }
+  .Icon {
+    opacity: 0;
+    font-size: 1.4em;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1rem;
+  }
+}

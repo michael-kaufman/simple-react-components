@@ -1,0 +1,65 @@
+@import '../common.scss';
+
+.Popup {
+  $popup-background: #0b1122;
+  $popup-border-color: #0b1122;
+  $popup-border-width: 0;
+  $popup-arrow-size: 1rem;
+
+  min-width: 100%;
+  margin-top: $popup-arrow-size + 1rem;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.15s ease-in;
+  transform-origin: 50% 0 0;
+
+  &.Popup--shown {
+    opacity: 1;
+  }
+
+  .Popup-inner {
+    background: $popup-background;
+    border: $popup-border-width solid $popup-border-color;
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(black, 0.1);
+    white-space: nowrap;
+    position: relative;
+    text-align: left;
+  }
+  .Popup-arrow {
+    margin-bottom: -$popup-border-width;
+    position: relative;
+    z-index: 2;
+
+    &::before, &::after {
+      content: " ";
+      height: 0;
+      width: 0;
+      bottom: 100%;
+      left: 50%;
+      border-style: solid;
+      border-color: transparent;
+      border-width: $popup-arrow-size;
+      position: absolute;
+    }
+    &::before {
+      border-bottom-color: $popup-border-color;
+      margin-left: -$popup-arrow-size;
+    }
+    &::after {
+      border-bottom-color: $popup-background;
+      margin-left: -$popup-arrow-size;
+    }
+  }
+}
+
+.PopupHandler {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  outline: none;
+}

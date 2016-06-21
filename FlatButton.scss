@@ -1,0 +1,25 @@
+@import '../common.scss';
+
+@mixin customButton($border, $color, $bgcolor) {
+  border: solid $border 2px;
+  color: $color;
+  background: $bgcolor;
+}
+
+.FlatButton {
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  &--brand {
+    @include customButton($brand-color, $dark-blue, $brand-color);
+  }
+  &--lilac {
+    @include customButton($lilac, $lilac, $theme-color-dark-backdrop);
+  }
+  &--transparent {
+    @include customButton($brand-color, $brand-color, rgba(0, 0, 0, 0.2));
+  }
+}
